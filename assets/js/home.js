@@ -18,7 +18,7 @@ $('#float-button').click(function() {
     var name = document.getElementById('name').value;
     var message = document.getElementById('message').value;
     
-    var whatsappUrl = "https://wa.me/5511948206594?text=" + encodeURIComponent("Nome" + ': ' + name + ': ' + "Mensagem" + ': ' + message);
+    var whatsappUrl = "https://wa.me/554791165955?text=" + encodeURIComponent("Nome" + ': ' + name + ': ' + "Mensagem" + ': ' + message);
     
     // Feche o modal e abra o WhatsApp depois de um pequeno atraso
     $('#formModal').modal('hide');
@@ -53,7 +53,7 @@ $('#float-button').click(function() {
         let hashval = item.getAttribute('href')
         let target = document.querySelector(hashval)
         let targetPosition = target.offsetTop
-        let navbarHeight = 98 // substitua isso pela altura da sua barra de navegação
+        let navbarHeight = 120 // substitua isso pela altura da sua barra de navegação
         window.scroll({
           top: targetPosition - navbarHeight,
           behavior: 'smooth'

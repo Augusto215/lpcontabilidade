@@ -1,18 +1,18 @@
   
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, min-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/home.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" href="/assets/image/Logo-Leonardo-Senem-Contabilidade-_1_.ico" sizes="64x64" type="image/x-icon">
-        <title>Senem Contabilidade</title>
-    </head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, min-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/assets/image/Logo-Leonardo-Senem-Contabilidade-_1_.ico" sizes="64x64" type="image/x-icon">
+    <title>Senem Contabilidade</title>
+</head>
 
    <body>
     <header>
@@ -68,7 +68,7 @@
   </header>
         
 
-
+        
 
         
         <div id="index7">
@@ -128,6 +128,200 @@
               </div>
 
 
+
+            <div class="col-md-6 col-12 text-block  container-form">
+             <img src="/assets/image/bela-jovem-doutora-olhando-a-camera-no-escritorio-removebg-preview.png">
+
+              
+
+            
+
+            </div>
+
+                 
+                
+                <div id="formStatus" class="mt-3"></div>
+                
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                $('#myForm').on('submit', function(e) {
+                  e.preventDefault();
+                
+                  var form = $(this);
+                  var status = $('#formStatus');
+                
+                  $.ajax({
+                      type: "POST",
+                      url: form.attr('action'),
+                      data: form.serialize(),
+                      dataType: 'json',
+                      success: function(data) {
+                        status.html('<div class="alert alert-success" role="alert">Mensagem enviada com sucesso!</div>');
+                        form[0].reset();
+                      },
+                      error: function() {
+                        status.html('<div class="alert alert-danger" role="alert">Ocorreu um erro ao enviar a mensagem.</div>');
+                      }
+                    });
+                });
+                </script>
+             </div>
+            </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+       
+
+        
+
+        <div id="index-main">
+
+          <div class="container">
+            <div class="main" style="position:relative;" >
+                <div class="icon-medico">
+
+                    <img  src="/assets/image/stethoscope.png">
+
+                </div>
+            <p style="font-size: 1.2rem; text-align: center; padding:2.5rem;">
+           
+                Você, Médico, merece foco que realmente importa: a saúde dos seus pacientes. Deixe a Senem Contabilidade cuidar do seu bem-estar financeiro.
+
+            </p>  
+            </p>
+          </div>
+          </div>
+
+
+        </div>
+
+        <div id="index2" >
+            <div class="container">
+        
+              <p>
+                
+                A Senem Contabilidade é sua parceira na jornada para a sustentabilidade financeira. Queremos que você alcance novos patamares de sucesso profissional, enquanto desfruta de tranquilidade em relação a sua empresa.</p>
+            <div class=" grid-cards" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap:1rem;">
+                
+             
+                <div class="card" style="width: 100%;">
+                  <div class="card-img">
+                    <img src="/assets/image/freedom (2).png">
+                  </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Liberdade para Cuidar:  </h5>
+                     
+                        <p>Nossos serviços de contabilidade especializados em saúde liberam seu tempo e energia para você fazer o que faz de melhor: cuidar dos pacientes. Deixe-nos lidar com os números, enquanto você faz a diferença.</p>
+                      
+                       
+                    
+                   
+                    </div>
+                  </div>
+
+
+          <div class="card" style="width: 100%;">
+            <div class="card-img">
+              <img src="/assets/image/agreement (1).png">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Conformidade sem Preocupações:</h5>
+             
+              <p>As complexidades fiscais e regulatórias podem ser um labirinto. Mantenha-se tranquilo, sabendo que sua prática está sempre em conformidade.</p>
+              
+            </div>
+          </div>
+
+          <div class="card" style="width: 100%;">
+            <div class="card-img">
+              <img src="/assets/image/money-flow (1).png">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Lucratividade Aprimorada:</h5>
+             <p>
+              Através de análises e estratégias personalizadas, nós otimizamos suas finanças. Você não apenas economizará dinheiro, mas também descobrirá novas oportunidades para aumentar seus ganhos.
+                </p>
+             
+            </div>
+          </div>
+
+            </div>
+        </div>
+       
+        </div>
+
+
+        <div id="index2">
+
+          <div class="container">
+        
+            <div class="consultar">
+
+              <div class="img-div">
+                <span class="box-img">
+                <img src="/assets/image/logo-cfc.png">
+              </span>
+                
+              <span class="box-img">
+                <img src="/assets/image/logo-cfc.png" fill="#fff">
+              </span>
+
+
+              </div>
+
+              <span class="consulte-txt">
+
+                <p>
+                  Consulte nosso registro do Conselho Federal de Contabilidade
+                </p>
+
+              </span>
+
+              <a href="/assets/image/CND CRC .pdf" target="_blank"><button class="button-main2">
+                CONSULTAR
+              </button></a> 
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+      
+
+
+              
+        <div id="index4">
+
+          <div class="container">
+            <div class="row align-items-center">
+             
+              <div class="col-md-6 col-12 text-block">
+                <h2>
+                  SENEM CONTABILIDADE PARA MÉDICOS
+                </h2>
+
+                <p>
+                  Na Senem Contabilidade, nossa dedicação é voltada exclusivamente para médicos e profissionais da área da saúde. Compreendemos as nuances fiscais e regulatórias do seu campo e estamos aqui para tornar a contabilidade uma tarefa simples e eficaz. Nossa equipe especializada oferece serviços contábeis feitos sob medida, assegurando que você possa focar no bem-estar dos seus pacientes, sem a distração das obrigações financeiras. Escolha a Senem Contabilidade para uma administração financeira impecável e uma parceria que entende as necessidades singulares da medicina. Estamos aqui para impulsionar o crescimento e sucesso do seu consultório ou clínica médica. Junte-se a nós na Senem Contabilidade e descubra como podemos melhorar sua gestão financeira na área da saúde.
+
+
+
+
+
+
+                </p>
+              </div>
 
               <div class="col-md-6 col-12 text-block  container-form">
                 <div id="formStatus" class="mt-3"></div> <!-- Aqui foi adicionado o estilo clear:both; -->
@@ -189,218 +383,17 @@
                 
               </div>
             </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-       
-
-        
-
-        <div id="index-main">
-
-          <div class="container">
-            <div class="main" >
-            <p style="font-size: 1.2rem; text-align: center;">
-           
-Na Senem Contabilidade, entendemos que gerenciar as finanças de sua clínica ou consultório é tão crucial quanto oferecer serviços de qualidade aos seus pacientes. Somos a sua parceira confiável, especializada em serviços contábeis e financeiros exclusivos para profissionais da área da saúde.
-
-            </p>  
-            </p>
-          </div>
-          </div>
-
-
-        </div>
-
-        <div id="index2" >
-            <div class="container">
-            <h2 id="especialidades">NOSSOS SERVIÇOS:</h2>
-              <p>
-                
-                Com uma tática holística e precisa, nós solidificamos a identidade digital da sua marca. Utilizando conteúdo estratégico e interações efetivas, amplificamos a visibilidade e o posicionamento da sua empresa. Nossa metodologia única se concentra em impulsionar a conexão e a credibilidade da sua marca no ambiente online.</p>
-            <div class=" grid-cards" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap:1rem;">
-                
-             
-                <div class="card" style="width: 100%;">
-                  <div class="card-img">
-                    <img src="/assets/image/accounts.png">
-                  </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Escritório de Contabilidade:  </h5>
-                      <ul class="card-text"> <li>
-                        Departamento Fiscal
-                        </li>
-                        <li> 
-                          Departamento Contábil
-                        </li>
-                        <li>
-
-                          Departamento Societário
-
-                        </li>
-                      </ul>
-                   
-                    </div>
-                  </div>
-
-
-          <div class="card" style="width: 100%;">
-            <div class="card-img">
-              <img src="/assets/image/search.png">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Perícia:</h5>
-              <ul class="card-text"> <li>
-                Perícia Financeira
-                </li>
-                <li> 
-                  Execução de Sentença
-                </li>
-                <li>
-                Perícia Contábil
-              </li>
-
-              </ul>
-              
             </div>
           </div>
-
-          <div class="card" style="width: 100%;">
-            <div class="card-img">
-              <img src="/assets/image/money.png">
+          <style>
+            #myForm
+            {
+              width: auto !important;
+            }
+          </style>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Precificação:</h5>
-              <ul class="card-text"> <li>
-                Contabilidade Gerencial
-                </li>
-                <li> 
-                  Processos de Padronização
-                </li>
-                <li>
-                Implementação de Budget e Forecast
-              </li>
-              </ul>
-             
             </div>
-          </div>
-
-            </div>
-        </div>
-       
-        </div>
-
-
-        <div id="index2">
-
-          <div class="container">
-        
-            <div class="consultar">
-
-              <div class="img-div">
-                <span class="box-img">
-                <img src="/assets/image/logo-cfc.png">
-              </span>
-                
-              <span class="box-img">
-                <img src="/assets/image/logo-cfc.png" fill="#fff">
-              </span>
-
-
-              </div>
-
-              <span class="consulte-txt">
-
-                <p>
-                  Consulte nosso registro do Conselho Federal de Contabilidade
-                </p>
-
-              </span>
-
-
-             <a href="/assets/image/CND CRC .pdf" target="_blank"><button class="button-main2">
-                CONSULTAR
-              </button></a> 
-            </div>
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-
-      
-
-
-        <div id="index3">
-
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-6 col-12 text-block">
-              <img style="width:100%; height: 23rem; border-radius: 12px; object-fit: cover;" src="/assets/image/maos-da-medica-irreconhecivel-escrevendo-no-formulario-e-digitando-no-teclado-do-laptop.jpg">
-            </div>
-              <div class="col-md-6 col-12 text-block">
-                <h2>
-                  CONTABILIDADE SENEM PARA MÉDICOS
-                </h2>
-
-                <p>
-
-                  Na Contabilidade Senem, somos especializados em atender médicos e profissionais de saúde. Com uma compreensão profunda das necessidades financeiras e regulatórias da área médica, oferecemos serviços contábeis personalizados que liberam você para se concentrar no que realmente importa.
-
-                  Escolha a Contabilidade Senem para uma gestão financeira sólida, conformidade garantida e uma parceria dedicada que entende seu negócio. Estamos aqui para impulsionar sua prática médica e fornecer resultados tangíveis e duradouros.
-                  
-                  Junte-se a nós na Contabilidade Senem e dê o próximo passo em direção ao sucesso na área da saúde.
-                  
-                  
-              </div>
-            </div>
-              </div>
-        </div>
-
-              
-        <div id="index4">
-
-          <div class="container">
-            <div class="row align-items-center">
-             
-              <div class="col-md-6 col-12 text-block inverter1">
-                <h2>
-                  CONTABILIDADE SENEM PARA DENTISTAS
-                </h2>
-
-                <p>
-
-                  Na Contabilidade Senem, nos dedicamos exclusivamente a servir dentistas e profissionais da área odontológica. Compreendemos as complexidades fiscais e regulatórias da sua prática e estamos aqui para tornar a contabilidade simples e eficiente.
-
-Nossa equipe especializada oferece serviços contábeis personalizados, garantindo que você possa se concentrar na saúde oral dos seus pacientes sem se preocupar com a papelada.
-
-Escolha a Contabilidade Senem para uma gestão financeira impecável, e uma parceria que entende as necessidades únicas da odontologia. Estamos aqui para contribuir com o crescimento e sucesso da sua clínica odontológica.
-
-Junte-se a nós na Contabilidade Senem e descubra como podemos otimizar sua gestão financeira na área da saúde bucal.
-                </p>
-              </div>
-
-              <div class="col-md-6 col-12 text-block inverter2">
-                <img style="width:100%; height: 23rem; border-radius: 12px; object-fit: cover;" src="/assets/image/mulher-nova-que-sorri-antes-do-exame-medico.jpg">
-              </div>
-
-            </div>
-          </div>
-          
-
-
-          <div id="index8">
+          <div id="index5">
 
             <div class="container">
               <h2 style="color:#000 !important;">Dúvidas frequentes</h2>
@@ -491,7 +484,7 @@ Junte-se a nós na Contabilidade Senem e descubra como podemos otimizar sua gest
   
    
        
-          <div id="index8">
+          <div id="index5">
             <div class="container" >
               <section>
                 <h2 style="color:#000 !important;">DEPOIMENTOS</h2>
@@ -555,17 +548,19 @@ Junte-se a nós na Contabilidade Senem e descubra como podemos otimizar sua gest
         <div id="index6">
 
           <div class="container">
-            <div class="main">
-            <p style="font-size: 1.2rem; text-align: center;">
-             
-         
-              Estamos ansiosos para conhecer você, entender suas metas e desafios, e começar a traçar o caminho para a sua saúde financeira ideal. Entre em contato hoje mesmo e dê o primeiro passo em direção a um futuro mais forte e próspero.
+            <div class="main" style="position:relative;" >
+                <div class="icon-medico2">
 
-              Juntos, vamos construir um futuro saudável e financeiramente próspero!
+                    <img  src="/assets/image/doctor.png">
+
+                </div>
+            <p style="font-size: 1.2rem; text-align: center; padding:2.5rem;">
+           
+                Você, Médico, merece foco que realmente importa: a saúde dos seus pacientes. Deixe a Senem Contabilidade cuidar do seu bem-estar financeiro.
+
+            </p>  
             </p>
           </div>
-          </div>
-
 
         </div>
 
@@ -634,14 +629,7 @@ Junte-se a nós na Contabilidade Senem e descubra como podemos otimizar sua gest
 
       </footer>
       
-        <style>
 
-         @media(max-width: 768px){
-.container-form {
-    margin-top:2rem !important;
-}
-         }
-        </style>
 
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
