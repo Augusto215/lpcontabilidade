@@ -3,7 +3,7 @@
 
 :root {
     --btn-color: #55ec8f;
-    --border-color:  rgb(0, 162, 255);
+    --border-color: #00a2ff;
     --background-color: rgb(255, 255, 255);
     --btn-color-gradient: linear-gradient(to right, rgb(0, 162, 255), #37d184) ;
   }
@@ -34,6 +34,15 @@
 {
     font-family: 'Urbanist', sans-serif !important;
     
+}
+
+.nav-item, .contato-li-ul
+{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
 }
 
 .typed-cursor {
@@ -674,6 +683,11 @@ padding: .5rem;
     margin:.5rem;
 }
 
+.navbar-nav .dropdown-menu {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+}
 
 
 #index3
@@ -737,11 +751,14 @@ h2
 }
 
 
-@media(max-width:991px)
+@media(max-width:1100px)
 {
 
   
-
+    .nav-item
+    {
+        margin-right: 0 !important;
+    }
 
     #index1
     {
@@ -761,6 +778,7 @@ h2
         box-shadow: 0 14px 74px rgba(0,0,0,.12);
     
     }
+
 
 
 
@@ -832,6 +850,13 @@ lottie-player
 @media (max-width:768px)
 {
 
+      
+    .nav-item, .contato-li-ul
+    {
+        margin-right:0 !important;
+        margin: .5rem 0; 
+    }
+
     .grid-cards
     {
         grid-template-columns: 1fr !important;
@@ -871,6 +896,14 @@ lottie-player
 
   
   
+}
+
+.dropdown-menu a
+{
+    margin:1rem .5rem;
+    width: 90%;
+    text-align: center;
+    font-weight: 600;
 }
 
 .item-slider

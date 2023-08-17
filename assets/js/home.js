@@ -4,26 +4,13 @@ $(document).ready(function(){
 
 
 
-$('#float-button').click(function() {
-    $('#formModal').modal('show');
-  });
+
   
   document.querySelectorAll('.contrate-a').forEach(function(el) {
     el.setAttribute('href', 'https://api.whatsapp.com/send?phone=554791165955&text=Ol%C3%A1!%20Eu%20queria%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Senem%20Contabildade.');
 });
 
-  document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    var name = document.getElementById('name').value;
-    var message = document.getElementById('message').value;
-    
-    var whatsappUrl = "https://wa.me/554791165955?text=" + encodeURIComponent("Nome" + ': ' + name + ': ' + "Mensagem" + ': ' + message);
-    
-    // Feche o modal e abra o WhatsApp depois de um pequeno atraso
-    $('#formModal').modal('hide');
-    setTimeout(function() { window.location.href = whatsappUrl; }, 500);
-  });
+
 
 
   window.addEventListener('DOMContentLoaded', (event) => {
